@@ -1,30 +1,49 @@
+import ActivityBar from "./ActivityBar";
 import FileExplorer from "./FileExplorer";
-import UserCard from "./Usercard";
-
-function Sidebar({ users, files, activeFile, setActiveFile }) {
-  console.log(users);
+import UserCard from "./UserCard";
+import ChatPanel from "./ChatPanel";
+import UserPanel from "./UserPanel";
+function Sidebar({
+  roomId,
+  users,
+  files,
+  activeFile,
+  setActiveFile,
+  activeSidebar,
+  setActiveSidebar,
+  messages,
+  username,
+}) {
   return (
-    <div
-      style={{
-        width: "250px",
-        background: "#1f1f1f",
-        color: "white",
-        padding: "20px",
-      }}
-    >
-      <FileExplorer
-        files={files}
-        activeFile={activeFile}
-        setActiveFile={setActiveFile}
+    <div style={{ display: "flex", height: "100vh" }}>
+      <ActivityBar
+        activeSidebar={activeSidebar}
+        setActiveSidebar={setActiveSidebar}
       />
 
-      <hr />
+      <div
+        style={{
+          width: "250px",
+          background: "#252526",
+          color: "white",
+          padding: "10px",
+        }}
+      >
+        {activeSidebar === "files" && (
+          <FileExplorer
+            roomId={roomId}
+            files={files}
+            activeFile={activeFile}
+            setActiveFile={setActiveFile}
+          />
+        )}
 
-      <h2>Connected Users</h2>
+        {activeSidebar === "users" && <UserPanel users={users} />}
 
-      {users.map((user) => (
-        <UserCard key={user.socketId} user={user} />
-      ))}
+        {activeSidebar === "chat" && (
+          <ChatPanel roomId={roomId} username={username} messages={messages} />
+        )}
+      </div>
     </div>
   );
 }

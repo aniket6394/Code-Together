@@ -2,14 +2,29 @@ function UserCard({ user }) {
   return (
     <div
       style={{
-        padding: "12px",
-        marginBottom: "8px",
-        background: "#2d2d2d",
-        borderRadius: "6px",
-        color: "white",
+        display: "flex",
+        alignItems: "center",
+        gap: "10px",
+        padding: "8px 0",
       }}
     >
-      👤 {user.username}
+      <div
+        style={{
+          width: "30px",
+          height: "30px",
+          borderRadius: "50%",
+          background: user.color,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#000",
+          fontWeight: "bold",
+        }}
+      >
+        {user.username[0].toUpperCase()}
+      </div>
+
+      <span>{user.username}</span>
     </div>
   );
 }

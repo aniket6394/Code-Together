@@ -8,7 +8,13 @@ const createRoom = (req, res) => {
   rooms.set(roomId, {
     host: null,
     users: [],
-    code: "// Start Coding...\n",
+    files: [
+      {
+        id: uuid(),
+        name: "main.js",
+        content: "// Start Coding...\n",
+      },
+    ],
     language: "javascript",
     theme: "dark",
   });

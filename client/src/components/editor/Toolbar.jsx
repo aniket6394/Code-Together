@@ -1,6 +1,16 @@
-function Toolbar({ language, theme, onLanguageChange, onThemeChange, roomId }) {
+import toast from "react-hot-toast";
+import { downloadProject } from "./donwloadProject";
+function Toolbar({
+  language,
+  theme,
+  onLanguageChange,
+  onThemeChange,
+  roomId,
+  files,
+}) {
   const copyRoomId = async () => {
     await navigator.clipboard.writeText(roomId);
+    toast.success("Room Id copied");
   };
 
   return (
@@ -28,7 +38,7 @@ function Toolbar({ language, theme, onLanguageChange, onThemeChange, roomId }) {
           <option value="dracula">Dracula</option>
         </select>
       </div>
-
+      <button onClick={() => downloadProject(files)}>📦 Download</button>
       <button onClick={copyRoomId}>Copy Room ID</button>
     </div>
   );
