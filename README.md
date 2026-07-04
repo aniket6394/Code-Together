@@ -1,137 +1,132 @@
-# Collaborative Code Editor
+# 🚀 Collaborative Code Editor
 
-A real-time collaborative code editor inspired by modern online IDEs. Multiple users can join the same room and collaborate on code in real time with synchronized editor settings.
-
-## ✨ Features
-
-- 🔗 Create and Join Collaboration Rooms
-- 👥 Live Connected Users
-- 💻 Real-time Code Synchronization
-- 🌐 Real-time Language Synchronization
-- 🎨 Real-time Theme Synchronization
-- 📋 Copy Room ID
-- 🚪 Leave Room
-- 📝 CodeMirror Editor
-- 📂 Sidebar with File Explorer (UI)
-- 🛠️ Modular React Component Structure
-- ⚡ Socket.IO powered communication
+A real-time collaborative code editor where multiple users can join the same room and collaborate on code together. Built using React, Node.js, Socket.IO, and CodeMirror with live synchronization of code, files, themes, and editor settings.
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 ### Frontend
 - React
 - React Router
-- Socket.IO Client
 - CodeMirror
-- JavaScript
-- CSS
+- Socket.IO Client
+- React Hot Toast
 
 ### Backend
 - Node.js
 - Express.js
 - Socket.IO
 
----
-
-## 📁 Project Structure
-
-```
-project/
-│
-├── client/
-│   ├── components/
-│   │   ├── Editor/
-│   │   ├── Sidebar/
-│   │   └── ...
-│   ├── pages/
-│   ├── socket/
-│   └── ...
-│
-├── server/
-│   ├── controllers/
-│   ├── routes/
-│   ├── socket/
-│   └── ...
-│
-└── README.md
-```
+### Tools
+- Git & GitHub
+- UUID
 
 ---
 
-## 🚀 Getting Started
+# ⚡ Features
 
-### Clone Repository
+- 🔗 Create & Join Collaboration Rooms
+- 💻 Real-time Code Synchronization
+- 📂 Multi-file Support
+- 📄 File Explorer
+- 📑 File Tabs
+- ➕ Create Files
+- ✏️ Rename Files
+- 👥 Live Connected Users
+- 💬 Room Chat
+- 🖱️ Live Collaborative Cursor
+- 🎨 Real-time Theme Synchronization
+- 🌐 Real-time Language Synchronization
+- 📋 Copy Room ID
+- 🚪 Leave Room
+- 🔔 Toast Notifications
+- 📦 Download Project as ZIP
+
+---
+
+# 🚀 Running Locally
+
+## 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/collaborative-code-editor.git
+git clone https://github.com/aniket6394/Code-Together.git
 ```
 
-### Install Dependencies
+## 2. Install dependencies
 
-#### Frontend
+### Frontend
 
 ```bash
 cd client
 npm install
-npm run dev
 ```
 
-#### Backend
+### Backend
 
 ```bash
 cd server
 npm install
+```
+
+## 3. Start the backend
+
+```bash
+cd server
+npm run dev
+```
+
+or
+
+```bash
 nodemon server.js
 ```
 
----
+## 4. Start the frontend
 
-## 📸 Current Features
+```bash
+cd client
+npm run dev
+```
 
-- Real-time collaborative editing
-- Live room management
-- User synchronization
-- Language synchronization
-- Theme synchronization
-- Sidebar
-- Toolbar
-- Basic file explorer interface
+## 5. Open in browser
 
----
+```
+http://localhost:5173
+```
 
-## 🚧 Upcoming Features
-
-- Multi-file synchronization
-- Create/Delete/Rename files
-- File Tabs
-- Chat
-- Whiteboard
-- Code Execution
-- Docker Support
-- Authentication
-- Deployment
+Open two browser windows and join the same room to test real-time collaboration.
 
 ---
 
-## 📚 What I Learned
+# 📚 What I Learned
 
+- Building real-time collaborative applications
 - Socket.IO event-driven architecture
-- Building scalable React components
-- Managing shared application state
-- Designing collaborative real-time applications
-- CodeMirror integration
-- Room-based communication using WebSockets
+- CodeMirror customization
+- Real-time synchronization of multiple users
+- Collaborative cursor implementation
+- Managing shared application state in React
+- Designing scalable frontend components
 
 ---
 
-## 🤝 Contributing
+# 🚀 Upcoming Features
 
-Contributions, suggestions, and feedback are welcome.
+- 🎤 Voice Chat (WebRTC)
+- 🖍️ Live Selection Highlight
+- ▶️ Code Execution
+- 🐳 Docker Support
+- ☁️ Deployment
 
 ---
 
-## 📄 License
+# 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome.
+
+---
+
+# 📄 License
 
 This project is licensed under the MIT License.
